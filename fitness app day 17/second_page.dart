@@ -6,7 +6,7 @@ import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key, this.excerciseModel});
 
-  final ExcerciseModel? excerciseModel;
+  final ExerciseModel? excerciseModel;
 
   @override
   State<SecondPage> createState() => _SecondPageState();

@@ -1,12 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fitness_app/model/excercise_model.dart';
+import 'package:fitness_app/screen/third_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key, this.excerciseModel});
 
-  final ExcerciseModel? excerciseModel;
+  final ExerciseModel? excerciseModel;
 
   @override
   State<SecondPage> createState() => _SecondPageState();
@@ -49,9 +50,7 @@ class _SecondPageState extends State<SecondPage> {
                     Text("$second",style: TextStyle(fontSize: 25,color: Colors.white),),
 
                     ElevatedButton(onPressed: (){
-
-
-
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ThirdPage()));
                     }, child: Text("Start",style: _myStyle(),))
                   ],
                 );

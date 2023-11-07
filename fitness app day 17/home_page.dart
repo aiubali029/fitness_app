@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fitness_app/model/excercise_model.dart';
-import 'package:fitness_app/second_page.dart';
+import 'package:fitness_app/screen/second_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -17,9 +17,9 @@ class _HomePageState extends State<HomePage> {
   String link =
       "https://raw.githubusercontent.com/codeifitech/fitness-app/master/exercises.json?fbclid=IwAR2gsu4SRvRRFkHK8JPTWHZXmaNP0dtpOG6h7ep4zQp7WaamX5S1UaSrc3A";
 
-  List<ExcerciseModel> allData = [];
+  List<ExerciseModel> allData = [];
 
-  late ExcerciseModel excercise;
+  late ExerciseModel excercise;
 
   @override
   void initState() {
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       var data = jsonDecode(response.body);
 
       for (var i in data["exercises"]) {
-        excercise = ExcerciseModel(
+        excercise = ExerciseModel(
             id: i["id"],
             title: i["title"],
             thumbnail: i["thumbnail"],
