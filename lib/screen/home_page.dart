@@ -1,6 +1,4 @@
-
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fitness_app/model/excercise_model.dart';
 import 'package:fitness_app/provide/home_provider.dart';
 import 'package:fitness_app/screen/second_page.dart';
 import 'package:flutter/material.dart';
